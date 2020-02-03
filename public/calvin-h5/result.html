@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no,address=no,email=no">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+<title>季路学旅 - 向全世界输入中国式品格教育</title>
+<link rel="stylesheet" type="text/css" href="./css/styles.css">
+<style type="text/css">
+html, body {
+  background: #F2F2F2;
+}
+</style>
+</head>
+
+<body>
+<div class="page-wrapper page-result" id="app">
+  <com-header></com-header>
+
+  <div class="page-content">
+    <div class="content">
+      <h3 class="result-title">{{ query.title }}</h3>
+      <p class="result-desc">{{ query.desc }}</p>
+    </div>
+  </div>
+  
+  <com-footer></com-footer>
+</div>
+
+<script type="text/javascript" src="./js/vue.min.js"></script>
+<script type="text/javascript" src="./js/components/header.js"></script>
+<script type="text/javascript" src="./js/components/footer.js"></script>
+<script type="text/javascript" src="./js/result.js"></script>
+</body>
+</html>

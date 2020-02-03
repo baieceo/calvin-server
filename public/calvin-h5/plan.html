@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no,address=no,email=no">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+<title>季路学旅 - 向全世界输入中国式品格教育</title>
+<link rel="stylesheet" type="text/css" href="./css/styles.css">
+</head>
+
+<body>
+<div class="page-wrapper page-plan" id="app">
+  <com-header></com-header>
+
+  <div class="page-content">
+    <div class="page-block">
+      <img src="./images/plan/plan-1.jpg" />
+    </div>
+
+    <template v-for="(item, index) in projectList">
+      <div class="page-block">
+        <img :src="item.img" />
+      </div>
+      <div class="actions"><a class="button button-primary" :href="'contact.html?type=plan&id=' + item.id">立即报名</a></div>
+      <div class="white-space"></div>
+    </template>
+  </div>
+  
+  <com-footer></com-footer>
+</div>
+
+<script type="text/javascript" src="./js/vue.min.js"></script>
+<script type="text/javascript" src="./js/components/header.js"></script>
+<script type="text/javascript" src="./js/components/footer.js"></script>
+<script type="text/javascript" src="./js/plan.js"></script>
+</body>
+</html>

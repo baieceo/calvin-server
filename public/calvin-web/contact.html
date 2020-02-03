@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>季路学旅 - 向全世界输入中国式品格教育</title>
+<link rel="stylesheet" type="text/css" href="./css/styles.css">
+<style type="text/css">
+html, body {
+  background: #F2F2F2;
+}
+</style>
+</head>
+
+<body>
+<div class="page-wrapper page-contact" id="app">
+  <com-header></com-header>
+
+  <div class="page-content">
+    <div class="page-center">
+      <img src="./images/contact/contact-1.jpg" />
+    </div>
+    <div class="form-wrapper">
+      <div class="form" ref="form" model="formData" rules="formRules">
+        <div class="form-item" v-if="query.id">
+          <label class="form-item__label">报名项目</label>
+          <div class="form-item__content">
+            <div class="input">
+              <p class="text">{{ query.title }}</p>
+            </div>
+            <div class="form-item__error"></div>
+          </div>
+        </div>
+
+        <div class="form-item" prop="name">
+          <label class="form-item__label">姓名</label>
+          <div class="form-item__content">
+            <div class="input">
+              <input type="text" class="input__inner" v-model="formData.name" />
+            </div>
+            <div class="form-item__error"></div>
+          </div>
+        </div>
+
+        <div class="form-item" prop="email">
+          <label class="form-item__label">电子邮箱</label>
+          <div class="form-item__content">
+            <div class="input">
+              <input type="text" class="input__inner" v-model="formData.email" />
+            </div>
+            <div class="form-item__error"></div>
+          </div>
+        </div>
+
+        <div class="form-item" prop="mobile">
+          <label class="form-item__label">联络手机</label>
+          <div class="form-item__content">
+            <div class="input">
+              <input type="text" class="input__inner" v-model="formData.mobile" />
+            </div>
+            <div class="form-item__error"></div>
+          </div>
+        </div>
+
+        <div class="form-item" prop="wechat">
+          <label class="form-item__label">微信</label>
+          <div class="form-item__content">
+            <div class="input">
+              <input type="text" class="input__inner" v-model="formData.wechat" />
+            </div>
+            <div class="form-item__error"></div>
+          </div>
+        </div>
+
+        <div class="form-item" prop="grade">
+          <label class="form-item__label">年级</label>
+          <div class="form-item__content">
+            <div class="input">
+              <input type="text" class="input__inner" v-model="formData.grade" />
+            </div>
+            <div class="form-item__error"></div>
+          </div>
+        </div>
+
+        <div class="form-item" prop="content">
+          <label class="form-item__label">联系内容</label>
+          <div class="form-item__content">
+            <div class="input">
+              <textarea rows="5" class="input__inner" v-model="formData.content"></textarea>
+            </div>
+            <div class="form-item__error"></div>
+          </div>
+        </div>
+
+        <div class="form-item">
+          <label class="form-item__label"></label>
+          <div class="form-item__content">
+            <button class="button" :class="{ 'is-loading': loading }" @click="validate" :disabled="loading">送出</button>
+            <div class="form-item__error">{{ message }}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="page-center" style="margin-bottom: 178px;">
+      <img src="./images/contact/contact-2.jpg" />
+      <a class="page-anchor page-link" href="index.html" style="left: 616px; bottom: 172px; width: 114px; height: 50px; background: #f2f2f2;">返回首页</a>
+    </div>
+    
+  </div>
+  
+  <com-footer></com-footer>
+</div>
+
+<script type="text/javascript" src="./js/vue.min.js"></script>
+<script type="text/javascript" src="./js/components/header.js"></script>
+<script type="text/javascript" src="./js/components/footer.js"></script>
+<script type="text/javascript" src="./js/libs/axios.min.js"></script>
+<script type="text/javascript" src="./js/contact.js"></script>
+</body>
+</html>

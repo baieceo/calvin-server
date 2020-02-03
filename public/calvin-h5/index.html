@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no,address=no,email=no">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+<title>季路学旅 - 向全世界输入中国式品格教育</title>
+<link rel="stylesheet" type="text/css" href="./css/styles.css">
+</head>
+
+<body>
+<div class="page-wrapper" id="app">
+  <com-header></com-header>
+
+  <div class="page-content">
+  	<div class="home-swiper">
+  	  <div class="home-swiper-images">
+        <a class="home-swiper-images-item" :class="{ fadein: index === swiperIndex }" v-for="(item, index) in swiperData" :key="index" :href="item.url" :style="{ 'background-image': 'url(' + item.img + ')' }"></a>
+      </div>
+      <div class="home-swiper-anchors">
+        <a class="home-swiper-anchors-item home-swiper-anchors-item_active" href="#area">出 團 地 區</a>
+        <a class="home-swiper-anchors-item" href="#promise">四 大 保 證</a>
+      </div>
+  	</div>
+
+  	<div class="page-anchor" id="area" style="top: 95vw;"></div>
+  	<div class="page-img"><img src="./images/index/index-2.jpg" /></div>
+
+  	<div class="group-swiper">
+  	  <div class="group-swiper-main">
+  	    <div class="group-swiper-main-image" :style="{ 'background-image': 'url(' + groupData[groupIndex].img + ')' }"></div>
+        <div class="group-swiper-images">
+          <a class="group-swiper-images-item" :class="{ 'group-swiper-images-item_active': index === groupIndex }" v-for="(item, index) in groupData" :key="index" @click="groupIndex = index" :style="{ 'background-image': 'url(' + item.img + ')' }"></a>
+        </div>
+  	    <div class="group-swiper-main-content">
+  	    	<h4 class="group-swiper-main-title">{{ groupData[groupIndex].title }}</h4>
+  	    	<p class="group-swiper-main-desc">{{ groupData[groupIndex].desc }}</p>
+  	    	<div class="group-swiper-main-actions">
+  	    		<a class="button" href="/">详细内容</a>
+  	    		<a class="button button-primary" href="/">立即报名</a>
+  	    	</div>
+  	    </div>
+  	  </div>
+  	  
+  	</div>
+
+  	<div class="page-anchor" id="promise" style="top: 270vw;"></div>
+  	<div class="page-img"><img src="./images/index/index-5.jpg" /></div>
+  	<div class="page-img"><img src="./images/index/index-12.jpg" /></div>
+  </div>
+  
+  <com-footer></com-footer>
+</div>
+
+<script type="text/javascript" src="./js/vue.min.js"></script>
+<script type="text/javascript" src="./js/components/header.js"></script>
+<script type="text/javascript" src="./js/components/footer.js"></script>
+<script type="text/javascript" src="./js/index.js"></script>
+</body>
+</html>
